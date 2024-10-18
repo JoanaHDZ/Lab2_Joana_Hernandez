@@ -61,12 +61,11 @@ public class LabP2_JoanaHernandez {
             } 
         } else if (respuesta == 2){
             int u = 0;
-            int o = 4;
             
             int jugador = 0;
             int computadora = 0;
             
-            while (u != 4) {
+            while (u != 3) {
             Random ran = new Random();
             int ran1 = ran.nextInt(10) + 1;
             int ran2 = ran.nextInt(10) + 1;
@@ -86,7 +85,7 @@ public class LabP2_JoanaHernandez {
             System.out.println("4) terminar");
             menu = scanner.nextInt();
             
-                while (u !=0) {
+                while (u !=4 && jugador < 20 && computadora < 20) {
                  if (menu ==1) {
                     jugador = jugador + 1;
                     computadora = computadora + 2;
@@ -96,7 +95,7 @@ public class LabP2_JoanaHernandez {
                      computadora = computadora + 2;
                     } 
                  if (menu==3) {
-                    break;
+                    continue;
                   } 
                  if (menu==4) {
                      break;
