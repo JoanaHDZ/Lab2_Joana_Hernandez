@@ -60,28 +60,70 @@ public class LabP2_JoanaHernandez {
                    
             } 
         } else if (respuesta == 2){
+            int u = 0;
+            int o = 4;
+            
+            int jugador = 0;
+            int computadora = 0;
+            
+            while (u != 4) {
             Random ran = new Random();
-            int n_ran = ran.nextInt(10)+1;
+            int ran1 = ran.nextInt(10) + 1;
+            int ran2 = ran.nextInt(10) + 1;
             
+            jugador = jugador + ran1;
+            computadora = computadora + ran2;
             
-            int puntosJugador = 10;
-            int puntosComputadora = 0;
-            System.out.print("Puntos de jugador: " + puntosJugador);
-            System.out.println("Puntos de maquina: " + puntosComputadora);
+            System.out.println("Puntos de jugador: " + jugador);
+            System.out.println("Puntos de maquina: " + computadora);
             System.out.println("------------------------------------------");
             
+            int menu = 0;
             System.out.println("Que desea hacer? ");
             System.out.println("1) Agregar 1");
             System.out.println("2) Agregar 2");
             System.out.println("3) seguir");
             System.out.println("4) terminar");
-            int hacer = scanner.nextInt();
+            menu = scanner.nextInt();
             
-            if (hacer ==1) {
-                puntosJugador = puntosJugador + 1;
-                
+                while (u !=0) {
+                 if (menu ==1) {
+                    jugador = jugador + 1;
+                    computadora = computadora + 2;
+                 } 
+                 if (menu==2) {
+                     jugador = jugador + 2;
+                     computadora = computadora + 2;
+                    } 
+                 if (menu==3) {
+                    break;
+                  } 
+                 if (menu==4) {
+                     break;
+                    }
+                    u++;
+                }
+             }
+                 System.out.println("Jugador: "+ jugador); 
+                 System.out.println("Computadora: "+ computadora);  
+                 if (jugador > 20 && computadora <=20) {
+                     System.out.println("Computadora gana");
+                 } else {
+                    System.out.println("Jugador gana");
+                 }
+    } else if (respuesta ==3) {
+         int i = 1;
+           while (i <= 12) {
+            int j = 1;
+            while (j <= i) {
+                System.out.print("*"); 
+                j++;
             }
-        }
+            System.out.println(); 
+            i++;
+        }     
+     } else {
+        System.out.println("Numero invalido");
     }
-    
+   }
 }
